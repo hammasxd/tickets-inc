@@ -1,6 +1,6 @@
 'use client';
-import { thirdWebClient } from '@/app/layout';
 import { Button, Modal, ModalBody, ModalContent, useDisclosure } from '@nextui-org/react';
+import { createThirdwebClient } from 'thirdweb';
 import { polygonAmoy } from 'thirdweb/chains';
 import { ConnectEmbed, useActiveAccount, useActiveWallet, useWalletBalance } from 'thirdweb/react';
 import { createWallet } from 'thirdweb/wallets';
@@ -9,6 +9,8 @@ export const wallets = [
     createWallet("com.coinbase.wallet"),
     createWallet("me.rainbow")
 ];
+export const thirdWebClient = createThirdwebClient({ clientId: 'f76f50283af21db4ef0e6eec33b378eb' });
+
 function ConnectWallet({widthFull}:{widthFull?:boolean}) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const activeWallet = useActiveWallet();
@@ -70,6 +72,7 @@ function ConnectWallet({widthFull}:{widthFull?:boolean}) {
                     {(onClose) => (
                         <>
                             <ModalBody>
+                                <h1 className="font-bold text-2xl text-primary">Tickets Inc.</h1>
                                 <ConnectEmbed
                                     style={{
                                         width: '100%',

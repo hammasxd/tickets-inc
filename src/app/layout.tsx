@@ -3,9 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThirdwebProvider } from "thirdweb/react";
 import { NextUIProvider } from "@nextui-org/react";
-export const thirdWebClient = createThirdwebClient({ clientId: 'f76f50283af21db4ef0e6eec33b378eb' });
 import Header from "./Header";
-import { createThirdwebClient } from "thirdweb";
+import { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,6 +16,13 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+export const metadata: Metadata = {
+	title: 'Ticket Inc.',
+	description: 'Best place to buy latest events tickets',
+	icons: {
+		icon: "/favicon.ico"
+	}
+};
 
 export default function RootLayout({
   children,

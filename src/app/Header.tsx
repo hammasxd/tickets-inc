@@ -1,5 +1,6 @@
-import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import {  Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import ConnectWallet from "@/components/ConnectWallet";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -11,7 +12,7 @@ export default function Header() {
       <NavbarItem>
         </NavbarItem>
         <NavbarItem>
-         <Link href="/createticket">Create Event</Link>
+         <Link className=" text-primary" href="/createticket">Create Event</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">

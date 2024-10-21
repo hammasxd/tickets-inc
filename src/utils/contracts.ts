@@ -1,4 +1,4 @@
-import { thirdWebClient } from "@/app/layout"
+import { thirdWebClient } from "@/components/ConnectWallet";
 import { getContract } from "thirdweb"
 import { polygonAmoy } from "thirdweb/chains"
 
